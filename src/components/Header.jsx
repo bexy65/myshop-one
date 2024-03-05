@@ -1,20 +1,23 @@
 import React from 'react';
+import HamburgerNavIcon from './HamburgerNavIcon';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 function Header() {
   return (
-    <div>
-      <h2>My Store</h2>
-      <nav>
-        <ul>
-          <li>Category1</li>
-          <li>Category2</li>
-          <li>Category3</li>
-          <li>Category4</li>
-        </ul>
-      </nav>
-      <div>
-        <button>User</button>
-        <button>Cart</button>
+    <div className='header'>
+      <HamburgerNavIcon />
+      <h2>MY STORE</h2>
+      <div className='header-button-container'>
+        <button>
+          <FontAwesomeIcon className='text-xl' icon={faUser} />
+        </button>
+        <div className='header-button-divider'></div>
+        <button>
+          <FontAwesomeIcon className='text-xl' icon={faShoppingCart} />
+        </button>
       </div>
     </div>
   );
