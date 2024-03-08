@@ -33,6 +33,23 @@ body {
   border-left: 1px solid black;
 }
 
+.hero { 
+  object-fit: cover;
+  background-image:url('https://www.click.co.uk/wp-content/uploads/2021/09/Digital-Marketing-for-eCommerce-SEO-blog-hero-image-1600x700.png');
+  min-height: 400px;
+} 
+
+.hero .hero-cover > * {
+  font-size: 22px;
+}
+
+.hero .hero-cover {
+  background-color: hsla(0, 0%, 100%, 0.384);
+  backdrop-filter: blur(3px);
+}
+
+
+
 @media only screen and (max-width: 600px) {
   .header nav ul {
     display: none;
@@ -71,5 +88,9 @@ body {
 
   .change-hamburger-button .bar3 {
     transform: translate(0, -11px) rotate(45deg);
+  }
+
+  .hero { 
+    max-height: 200px;
   }
 }
