@@ -1,10 +1,10 @@
 /* src/styles.css */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .header {
@@ -31,6 +31,22 @@ body {
 
 .header-button-divider {
   border-left: 1px solid black;
+}
+
+.hero {
+  object-fit: cover;
+  object-position: 50% 50%;
+  background-image: url("https://www.click.co.uk/wp-content/uploads/2021/09/Digital-Marketing-for-eCommerce-SEO-blog-hero-image-1600x700.png");
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .hero-cover {
+  max-width: 800px;
+  width: 70%;
+  background-color: hsla(0, 0%, 100%, 0.384);
 }
 
 @media only screen and (max-width: 600px) {
@@ -71,5 +87,13 @@ body {
 
   .change-hamburger-button .bar3 {
     transform: translate(0, -11px) rotate(45deg);
+  }
+
+  .hero {
+    max-height: 200px;
+  }
+
+  .hero .hero-cover {
+    width: 100%;
   }
 }
