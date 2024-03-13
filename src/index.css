@@ -49,6 +49,23 @@ body {
   background-color: hsla(0, 0%, 100%, 0.384);
 }
 
+.category-container {
+  width: 100%;
+}
+
+.category-container .category-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 70px;
+}
+
+.category-sidebar-button {
+  display: none;
+}
+
 @media only screen and (max-width: 600px) {
   .header nav ul {
     display: none;
@@ -95,5 +112,61 @@ body {
 
   .hero .hero-cover {
     width: 100%;
+  }
+
+  .category-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: rgba(133, 133, 249, 0.5);
+    backdrop-filter: blur(5px);
+    transition: width 0.3s ease-in-out;
+  }
+
+  .category-container .category-sidebar-button {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 10px;
+    margin-top: 5px;
+    font-size: 32px;
+  }
+
+  .category-container .category-list {
+    display: block;
+  }
+
+  .category-container .category-list > button {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .expanded {
+    width: 280px;
+  }
+
+  .collapsed {
+    width: 0;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1023px) {
+  .category-container .category-list {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.36);
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  }
+  .category-container .category-list button {
+    padding: 6px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .category-container .category-list {
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
   }
 }
