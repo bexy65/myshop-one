@@ -9,13 +9,13 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 function Header() {
   const [expanded, setExpanded] = useState(false);
 
-  function toggleCategoryListWidth() {
+  function toggleSidebar() {
     setExpanded(!expanded);
   }
 
   return (
     <div className="header-container">
-      <div className="header" onClick={toggleCategoryListWidth}>
+      <div className="header" onClick={toggleSidebar}>
         <HamburgerNavIcon
           icon={<FontAwesomeIcon className="text-2xl" icon={faBars} />}
         />
@@ -30,7 +30,7 @@ function Header() {
           </button>
         </div>
       </div>
-      <Categories state={expanded} function={toggleCategoryListWidth} />
+      <Categories state={expanded} function={toggleSidebar} />
     </div>
   );
 }
