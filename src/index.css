@@ -7,29 +7,34 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.header {
-  padding: 10px;
+.header-container {
+  position: sticky;
   top: 0;
   left: 0;
+  width: 100%;
+  background-color: hsl(208, 100%, 60%);
+  box-shadow: 0px 0px 2cqmax 2px #00000081;
+}
+
+.header-container .header {
+  padding: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  background-color: hsla(208, 100%, 60%, 0.994);
 }
 
-.header .header-button-container {
+.header-container .header .header-button-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.header .header-button-container > * {
+.header-container .header .header-button-container > * {
   margin: 0 10px;
 }
 
-.header-button-divider {
+.header-container .header .header-button-container .header-button-divider {
   border-left: 1px solid black;
 }
 
@@ -106,31 +111,28 @@ body {
     width: 100%;
   }
 
-  .category-container {
+  .header-container .category-container {
     position: absolute;
     left: 0;
     top: 0;
-    height: 100%;
+    height: 100vh;
     background-color: rgba(133, 133, 249, 0.5);
     backdrop-filter: blur(5px);
     transition: width 0.3s ease-in-out;
   }
 
-  .category-container .category-sidebar-button {
+  .header-container .category-container .category-sidebar-button {
     display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
+    float: inline-end;
     margin-right: 10px;
-    margin-top: 5px;
     font-size: 32px;
   }
 
-  .category-container .category-list {
+  .header-container .category-container .category-list {
     display: block;
   }
 
-  .category-container .category-list > button {
+  .header-container .category-container .category-list > button {
     width: 100%;
     text-align: center;
     margin-bottom: 20px;
@@ -139,6 +141,7 @@ body {
 
   .expanded {
     width: 280px;
+    overflow: auto;
   }
 
   .collapsed {
@@ -148,17 +151,13 @@ body {
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  .category-container .category-list {
+  .header-container .category-container .category-list {
     border-bottom: 1px solid rgba(0, 0, 0, 0.36);
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
   }
-  .category-container .category-list button {
+  .header-container .category-container .category-list button {
     padding: 6px;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  .category-container .category-list {
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-  }
 }

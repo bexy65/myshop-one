@@ -1,20 +1,11 @@
 import React, { useState } from "react";
 
-function Categories() {
-  const [expanded, setExpanded] = useState(true);
-
-  function toggleCategoryListWidth() {
-    setExpanded(!expanded);
-  }
-
+function Categories(props) {
   return (
     <div
-      className={`category-container ${expanded ? "expanded" : "collapsed"}`}
+      className={`category-container ${props.state ? "expanded" : "collapsed"}`}
     >
-      <button
-        className="category-sidebar-button"
-        onClick={toggleCategoryListWidth}
-      >
+      <button className="category-sidebar-button" onClick={props.function}>
         &#10006;
       </button>
       <ul className="category-list">
