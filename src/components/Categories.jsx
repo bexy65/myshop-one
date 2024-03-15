@@ -1,4 +1,5 @@
 import React from "react";
+import Categorylist from "./Categorylist";
 
 function Categories(props) {
   return (
@@ -8,12 +9,8 @@ function Categories(props) {
       <button className="category-sidebar-button" onClick={props.function}>
         &#10006;
       </button>
-      <ul className="category-list">
-        <button>Category1</button>
-        <button>Category1</button>
-        <button>Category1</button>
-        <button>Category1</button>
-      </ul>
+
+      <Categorylist />
     </div>
   );
 }
