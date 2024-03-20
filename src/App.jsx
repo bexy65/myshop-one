@@ -12,68 +12,6 @@ function App() {
       <Header setSelectedCategory={setSelectedCategory} />
       <Hero />
       <ProductGrid selectedCategory={selectedCategory} />
-      <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo magnam
-        exercitationem ducimus, iusto cumque, aut laudantium voluptates unde
-        perspiciatis quod, perferendis sunt. Excepturi, neque. Consequatur
-        adipisci inventore dolorum quaerat recusandae. Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Illo magnam exercitationem ducimus,
-        iusto cumque, aut laudantium voluptates unde perspiciatis quod,
-        perferendis sunt. Excepturi, neque. Consequatur adipisci inventore
-        dolorum quaerat recusandae. Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Illo magnam exercitationem ducimus, iusto cumque, aut
-        laudantium voluptates unde perspiciatis quod, perferendis sunt.
-        Excepturi, neque. Consequatur adipisci inventore dolorum quaerat
-        recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Illo magnam exercitationem ducimus, iusto cumque, aut laudantium
-        voluptates unde perspiciatis quod, perferendis sunt. Excepturi, neque.
-        Consequatur adipisci inventore dolorum quaerat recusandae. Lorem ipsum
-        dolor sit amet consectetur adipisicing elit. Illo magnam exercitationem
-        ducimus, iusto cumque, aut laudantium voluptates unde perspiciatis quod,
-        perferendis sunt. Excepturi, neque. Consequatur adipisci inventore
-        dolorum quaerat recusandae. Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Illo magnam exercitationem ducimus, iusto cumque, aut
-        laudantium voluptates unde perspiciatis quod, perferendis sunt.
-        Excepturi, neque. Consequatur adipisci inventore dolorum quaerat
-        recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Illo magnam exercitationem ducimus, iusto cumque, aut laudantium
-        voluptates unde perspiciatis quod, perferendis sunt. Excepturi, neque.
-        Consequatur adipisci inventore dolorum quaerat recusandae. Lorem ipsum
-        dolor sit amet consectetur adipisicing elit. Illo magnam exercitationem
-        ducimus, iusto cumque, aut laudantium voluptates unde perspiciatis quod,
-        perferendis sunt. Excepturi, neque. Consequatur adipisci inventore
-        dolorum quaerat recusandae. Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Illo magnam exercitationem ducimus, iusto cumque, aut
-        laudantium voluptates unde perspiciatis quod, perferendis sunt.
-        Excepturi, neque. Consequatur adipisci inventore dolorum quaerat
-        recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Illo magnam exercitationem ducimus, iusto cumque, aut laudantium
-        voluptates unde perspiciatis quod, perferendis sunt. Excepturi, neque.
-        Consequatur adipisci inventore dolorum quaerat recusandae. dolorum
-        quaerat recusandae. Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Illo magnam exercitationem ducimus, iusto cumque, aut laudantium
-        voluptates unde perspiciatis quod, perferendis sunt. Excepturi, neque.
-        Consequatur adipisci inventore dolorum quaerat recusandae. Lorem ipsum
-        dolor sit amet consectetur adipisicing elit. Illo magnam exercitationem
-        ducimus, iusto cumque, aut laudantium voluptates unde perspiciatis quod,
-        perferendis sunt. Excepturi, neque. Consequatur adipisci inventore
-        dolorum quaerat recusandae. dolorum quaerat recusandae. Lorem ipsum
-        dolor sit amet consectetur adipisicing elit. Illo magnam exercitationem
-        ducimus, iusto cumque, aut laudantium voluptates unde perspiciatis quod,
-        perferendis sunt. Excepturi, neque. Consequatur adipisci inventore
-        dolorum quaerat recusandae. Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Illo magnam exercitationem ducimus, iusto cumque, aut
-        laudantium voluptates unde perspiciatis quod, perferendis sunt.
-        Excepturi, neque. Consequatur adipisci inventore dolorum quaerat
-        recusandae. dolorum quaerat recusandae. Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Illo magnam exercitationem ducimus, iusto
-        cumque, aut laudantium voluptates unde perspiciatis quod, perferendis
-        sunt. Excepturi, neque. Consequatur adipisci inventore dolorum quaerat
-        recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Illo magnam exercitationem ducimus, iusto cumque, aut laudantium
-        voluptates unde perspiciatis quod, perferendis sunt. Excepturi, neque.
-        Consequatur adipisci inventore dolorum quaerat recusandae.
-      </div>
     </>
   );
 }
