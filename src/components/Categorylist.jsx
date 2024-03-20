@@ -4,7 +4,6 @@ function Categorylist({ setSelectedCategory }) {
   const [categories, setCategories] = useState([]);
 
   const handleCategoryClick = (category) => {
-    console.log(`Category set to ${category}`);
     setSelectedCategory(category);
   };
 
