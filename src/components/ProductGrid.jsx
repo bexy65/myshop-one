@@ -10,9 +10,6 @@ function ProductGrid({ selectedCategory }) {
       try {
         const res = await fetch(url);
         const productData = await res.json();
-        productData.products.map((e) => {
-          console.log(e.images[0]);
-        });
 
         setProducts(productData.products);
       } catch (error) {
