@@ -10,7 +10,7 @@ function Categories(props) {
         &#10006;
       </button>
 
-      <Categorylist />
+      <Categorylist setSelectedCategory={props.setSelectedCategory} />
     </div>
   );
 }
