@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faUser } from "@fortawesome/free-solid-svg-icons";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
-function Header() {
+function Header({ setSelectedCategory }) {
   const [expanded, setExpanded] = useState(false);
 
   function toggleSidebar() {
@@ -30,7 +30,11 @@ function Header() {
           </button>
         </div>
       </div>
-      <Categories state={expanded} function={toggleSidebar} />
+      <Categories
+        state={expanded}
+        function={toggleSidebar}
+        setSelectedCategory={setSelectedCategory}
+      />
     </div>
   );
 }
