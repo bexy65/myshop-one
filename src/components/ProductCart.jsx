@@ -8,8 +8,8 @@ function ProductCart({ title, price, thumbnail }) {
   return (
     <div className="product-card">
       <img src={thumbnail} alt="Product Image" className="product-image" />
+      <h2 className="product-title">{title}</h2>
       <div className="product-details">
-        <h2 className="product-title">{title}</h2>
         <p className="product-price">${price}</p>
         <button className="add-to-cart-btn" onClick={addToCartHandler}>
           Add to Cart
