@@ -3,8 +3,11 @@ import HamburgerNavIcon from "./HamburgerNavIcon";
 import Categories from "./Categories";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faUser } from "@fortawesome/free-solid-svg-icons";
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBars,
+  faUser,
+  faShoppingCart,
+} from "@fortawesome/free-solid-svg-icons";
 
 function Header({ setSelectedCategory }) {
   const [expanded, setExpanded] = useState(false);
