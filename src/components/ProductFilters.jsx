@@ -9,13 +9,9 @@ import {
 function ProductFilters() {
   return (
     <div className="products-filter-container">
-      <div>
-        <FontAwesomeIcon icon={faArrowDownWideShort} />
-      </div>
-      <div>
-        <FontAwesomeIcon icon={faArrowUp19} />
-        <FontAwesomeIcon icon={faArrowDown91} />
-      </div>
+      <FontAwesomeIcon icon={faArrowDownWideShort} />
+      <FontAwesomeIcon icon={faArrowUp19} />
+      <FontAwesomeIcon icon={faArrowDown91} />
     </div>
   );
 }

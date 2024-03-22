@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import MainContainer from "./components/MainContainer";
+import Content from "./components/Content";
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -11,10 +11,10 @@ function App() {
     <>
       <Header setSelectedCategory={setSelectedCategory} />
       <Hero />
-      <MainContainer
+      <Content
         selectedCategory={selectedCategory}
         tag="div"
-        className="main-container"
+        className="content"
       />
     </>
   );
