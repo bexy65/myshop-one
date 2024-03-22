@@ -6,7 +6,7 @@ import {
   faArrowDownWideShort,
 } from "@fortawesome/free-solid-svg-icons";
 
-function ProductFilters() {
+function ProductSort() {
   return (
     <div className="products-filter-container">
       <FontAwesomeIcon icon={faArrowDownWideShort} />
@@ -16,4 +16,4 @@ function ProductFilters() {
   );
 }
 
-export default ProductFilters;
+export default ProductSort;
