@@ -1,5 +1,5 @@
 import React from "react";
-import ProductFilters from "./ProductFilters";
+import ProductSort from "./ProductSort";
 
 function ContentHeader({ selectedCategory, ...props }) {
   return (
@@ -7,7 +7,7 @@ function ContentHeader({ selectedCategory, ...props }) {
       <h1>
         {selectedCategory ? <h1>{selectedCategory.toUpperCase()}</h1> : null}
       </h1>
-      <ProductFilters />
+      <ProductSort />
     </div>
   );
 }
