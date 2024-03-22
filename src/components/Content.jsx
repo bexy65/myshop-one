@@ -1,16 +1,14 @@
 import React from "react";
-import ProductFilters from "./ProductFilters";
 import ProductGrid from "./ProductGrid";
+import ContentHeader from "./ContentHeader";
 
 function Content({ selectedCategory, ...props }) {
   return (
     <props.tag className={props.className}>
-      <div className="cell-filter">
-        <h1>
-          {selectedCategory ? <h1>{selectedCategory.toUpperCase()}</h1> : null}
-        </h1>
-        <ProductFilters />
-      </div>
+      <ContentHeader
+        selectedCategory={selectedCategory}
+        className="cell-filter"
+      />
       <ProductGrid selectedCategory={selectedCategory} />
     </props.tag>
   );
