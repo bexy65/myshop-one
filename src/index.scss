@@ -1,0 +1,262 @@
+// src/styles.scss
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header-container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: hsl(208, 100%, 60%);
+  box-shadow: 0px 0px 2cqmax 2px #00000081;
+
+  .header {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .header-button-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      > * {
+        margin: 0 10px;
+      }
+
+      .header-button-divider {
+        border-left: 1px solid black;
+      }
+    }
+  }
+}
+
+.hero {
+  object-fit: cover;
+  object-position: 50% 50%;
+  background-image: url("https://www.click.co.uk/wp-content/uploads/2021/09/Digital-Marketing-for-eCommerce-SEO-blog-hero-image-1600x700.png");
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .hero-cover {
+    max-width: 800px;
+    width: 70%;
+    background-color: hsla(0, 0%, 100%, 0.384);
+  }
+}
+
+.category-container {
+  width: 100%;
+
+  .category-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 70px;
+  }
+}
+
+.category-sidebar-button {
+  display: none;
+}
+
+.hamburger-button {
+  display: none;
+}
+
+.product-grid {
+  display: grid;
+  gap: 10px;
+  padding: 4px;
+
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+    img {
+      height: 70%;
+      width: 100%;
+    }
+
+    .product-details {
+      display: flex;
+      flex-direction: row;
+      width: 90%;
+      justify-content: space-around;
+      margin-bottom: 10px;
+
+      button {
+        background-color: hsla(0, 100%, 50%, 0.726);
+        padding: 4px;
+        color: white;
+
+        &:hover {
+          background-color: hsla(0, 100%, 50%, 0.522);
+        }
+      }
+    }
+  }
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 100%;
+
+  .cell-filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid hsla(0, 0%, 0%, 0.416);
+
+    > * {
+      width: 50%;
+    }
+  }
+}
+
+.products-filter-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 50px;
+  font-size: x-large;
+
+  > * {
+    margin-left: 15px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header nav ul {
+    display: none;
+  }
+
+  .header h2 {
+    display: none;
+  }
+
+  .header-button-divider {
+    border: none;
+  }
+
+  .hamburger-button {
+    display: inline-block;
+    cursor: pointer;
+
+    .bar1,
+    .bar2,
+    .bar3 {
+      width: 35px;
+      height: 5px;
+      background-color: hsl(0, 0%, 0%);
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+  }
+
+  .hero {
+    max-height: 200px;
+
+    .hero-cover {
+      width: 100%;
+    }
+  }
+
+  .header-container .category-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    background-color: rgba(133, 133, 249, 0.5);
+    backdrop-filter: blur(5px);
+    transition: width 0.3s ease-in-out;
+
+    .category-sidebar-button {
+      display: block;
+      float: inline-end;
+      margin-right: 10px;
+      font-size: 32px;
+    }
+
+    .category-list {
+      display: block;
+
+      > button {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 20px;
+      }
+    }
+
+    &.expanded {
+      width: 280px;
+      overflow: auto;
+    }
+
+    &.collapsed {
+      width: 0;
+      overflow: hidden;
+    }
+  }
+
+  .content {
+    display: block;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    width: 100%;
+
+    .product-card {
+      min-height: 300px;
+    }
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1023px) {
+  .header-container .category-container .category-list {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.36);
+  }
+  .header-container .category-container .category-list button {
+    padding: 6px;
+  }
+
+  .content {
+    grid-template-columns: 100%;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .content {
+    grid-template-columns: 100%;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    .product-card {
+      height: 400px;
+    }
+  }
+}
