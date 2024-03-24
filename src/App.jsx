@@ -9,7 +9,10 @@ function App() {
 
   return (
     <>
-      <Header setSelectedCategory={setSelectedCategory} />
+      <Header
+        setSelectedCategory={setSelectedCategory}
+        selectedCategory={selectedCategory}
+      />
       <Hero />
       <MainContainer selectedCategory={selectedCategory} />
     </>
