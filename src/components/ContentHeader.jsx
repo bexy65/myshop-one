@@ -1,12 +1,11 @@
 import React from "react";
 import ProductSort from "./ProductSort";
+import ContentTitle from "./ContentTitle";
 
 function ContentHeader({ selectedCategory, ...props }) {
   return (
     <div className={props.className}>
-      <h1>
-        {selectedCategory ? <h1>{selectedCategory.toUpperCase()}</h1> : null}
-      </h1>
+      <ContentTitle selectedCategory={selectedCategory} />
       <ProductSort />
     </div>
   );
