@@ -2,20 +2,19 @@ import React, { useState } from "react";
 import "./app.scss";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Content from "./components/Content";
+import MainContainer from "./components/MainContainer";
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   return (
     <>
-      <Header setSelectedCategory={setSelectedCategory} />
-      <Hero />
-      <Content
+      <Header
+        setSelectedCategory={setSelectedCategory}
         selectedCategory={selectedCategory}
-        tag="div"
-        className="content"
       />
+      <Hero />
+      <MainContainer selectedCategory={selectedCategory} />
     </>
   );
 }

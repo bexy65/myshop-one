@@ -1,26 +1,39 @@
 import React, { useState, useEffect } from "react";
 import ProductCart from "./ProductCart";
 
-function ProductGrid({ selectedCategory }) {
+function ProductGrid({ selectedCategory, sortDirection }) {
   const [products, setProducts] = useState([]);
   const categoryUrl = `https://dummyjson.com/products/category/${selectedCategory}`;
 
   useEffect(() => {
+    const sortHandler = (products, sortDirection) => {
+      const sortedProducts = products.sort((a, b) => {
+        if (sortDirection === "asc") {
+          return a.price - b.price;
+        } else if (sortDirection === "desc") {
+          return b.price - a.price;
+        }
+      });
+      setProducts(sortedProducts);
+    };
+
     const fetchProducts = async (url) => {
       try {
         const res = await fetch(url);
         const productData = await res.json();
 
-        setProducts(productData.products);
+        if (typeof sortDirection === "string") {
+          sortHandler(productData.products, sortDirection);
+        } else {
+          setProducts(productData.products);
+        }
       } catch (error) {
         console.log("Error fetching data from server!");
       }
     };
 
     fetchProducts(categoryUrl);
-  }, [selectedCategory]);
-
-  console.log();
+  }, [selectedCategory, sortDirection]);
 
   return (
     <div className="product-grid">
