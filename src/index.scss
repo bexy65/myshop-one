@@ -148,12 +148,16 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-  .header nav ul {
-    display: none;
-  }
+  .header {
+    nav {
+      ul {
+        display: none;
+      }
+    }
 
-  .header h2 {
-    display: none;
+    h2 {
+      display: none;
+    }
   }
 
   .header-button-divider {
@@ -183,41 +187,43 @@ body {
     }
   }
 
-  .header-container .category-container {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100vh;
-    background-color: rgba(133, 133, 249, 0.5);
-    backdrop-filter: blur(5px);
-    transition: width 0.3s ease-in-out;
+  .header-container {
+    .category-container {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100vh;
+      background-color: rgba(133, 133, 249, 0.5);
+      backdrop-filter: blur(5px);
+      transition: width 0.3s ease-in-out;
 
-    .category-sidebar-button {
-      display: block;
-      float: inline-end;
-      margin-right: 10px;
-      font-size: 32px;
-    }
-
-    .category-list {
-      display: block;
-
-      > button {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 20px;
-        font-size: 20px;
+      .category-sidebar-button {
+        display: block;
+        float: inline-end;
+        margin-right: 10px;
+        font-size: 32px;
       }
-    }
 
-    &.expanded {
-      width: 280px;
-      overflow: auto;
-    }
+      .category-list {
+        display: block;
 
-    &.collapsed {
-      width: 0;
-      overflow: hidden;
+        > button {
+          width: 100%;
+          text-align: center;
+          margin-bottom: 20px;
+          font-size: 20px;
+        }
+      }
+
+      &.expanded {
+        width: 280px;
+        overflow: auto;
+      }
+
+      &.collapsed {
+        width: 0;
+        overflow: hidden;
+      }
     }
   }
 
@@ -240,11 +246,16 @@ body {
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1022px) {
-  .header-container .category-container .category-list {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.36);
-  }
-  .header-container .category-container .category-list button {
-    padding: 6px;
+  .header-container {
+    .category-container {
+      .category-list {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.36);
+
+        button {
+          padding: 6px;
+        }
+      }
+    }
   }
 
   .selected-category {
