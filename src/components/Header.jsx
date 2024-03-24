@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import HamburgerNavIcon from "./HamburgerNavIcon";
 import Categories from "./Categories";
+import CartModal from "./CartModal";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -11,6 +12,15 @@ import {
 
 function Header({ setSelectedCategory, selectedCategory }) {
   const [expanded, setExpanded] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const openCart = () => {
+    setIsCartOpen(true);
+  };
+
+  const closeCart = () => {
+    setIsCartOpen(false);
+  };
 
   function toggleSidebar() {
     setExpanded(!expanded);
@@ -34,10 +44,11 @@ function Header({ setSelectedCategory, selectedCategory }) {
             <FontAwesomeIcon className="text-xl" icon={faUser} />
           </button>
           <div className="header-button-divider"></div>
-          <button>
+          <button onClick={openCart}>
             <FontAwesomeIcon className="text-xl" icon={faShoppingCart} />
           </button>
         </div>
+        <CartModal isOpen={isCartOpen} onClose={closeCart} />
       </div>
       <Categories
         state={expanded}
