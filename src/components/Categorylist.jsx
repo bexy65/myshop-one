@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function Categorylist({ setSelectedCategory }) {
+function Categorylist({ setSelectedCategory, selectedCategory }) {
   const [categories, setCategories] = useState([]);
 
   const handleCategoryClick = (category) => {
@@ -25,7 +25,11 @@ function Categorylist({ setSelectedCategory }) {
   return (
     <ul className="category-list">
       {categories.map((category, index) => (
-        <button key={index} onClick={() => handleCategoryClick(category)}>
+        <button
+          key={index}
+          onClick={() => handleCategoryClick(category)}
+          className={selectedCategory === category ? "selected-category" : ""}
+        >
           {category.toUpperCase()}
         </button>
       ))}

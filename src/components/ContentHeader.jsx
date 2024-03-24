@@ -6,7 +6,10 @@ function ContentHeader({ selectedCategory, ...props }) {
   return (
     <div className={props.className}>
       <ContentTitle selectedCategory={selectedCategory} />
-      <ProductSort />
+      <ProductSort
+        setSortDirection={props.setSortDirection}
+        setRatingDirection={props.setRatingDirection}
+      />
     </div>
   );
 }

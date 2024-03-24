@@ -9,7 +9,7 @@ import {
   faShoppingCart,
 } from "@fortawesome/free-solid-svg-icons";
 
-function Header({ setSelectedCategory }) {
+function Header({ setSelectedCategory, selectedCategory }) {
   const [expanded, setExpanded] = useState(false);
 
   function toggleSidebar() {
@@ -37,6 +37,7 @@ function Header({ setSelectedCategory }) {
         state={expanded}
         function={toggleSidebar}
         setSelectedCategory={setSelectedCategory}
+        selectedCategory={selectedCategory}
       />
     </div>
   );
