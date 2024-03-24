@@ -18,9 +18,15 @@ function Header({ setSelectedCategory, selectedCategory }) {
 
   return (
     <div className="header-container">
-      <div className="header" onClick={toggleSidebar}>
+      <div className="header">
         <HamburgerNavIcon
-          icon={<FontAwesomeIcon className="text-2xl" icon={faBars} />}
+          icon={
+            <FontAwesomeIcon
+              className="text-2xl"
+              icon={faBars}
+              onClick={toggleSidebar}
+            />
+          }
         />
         <h2>MY STORE</h2>
         <div className="header-button-container">
