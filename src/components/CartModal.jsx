@@ -1,6 +1,6 @@
 import React from "react";
 
-function CartModal({ isOpen, onClose }) {
+function CartModal({ isOpen, onClose, ...props }) {
   return isOpen ? (
     <div className="modal-overlay">
       <div className="modal">
