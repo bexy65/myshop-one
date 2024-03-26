@@ -8,6 +8,7 @@ function MainContainer({ selectedCategory, ...props }) {
         selectedCategory={selectedCategory}
         tag="div"
         className="content"
+        addToCart={props.addToCart}
       />
     </div>
   );

@@ -15,6 +15,7 @@ function Content({ selectedCategory, ...props }) {
       <ProductGrid
         selectedCategory={selectedCategory}
         sortDirection={sortDirection}
+        addToCart={props.addToCart}
       />
     </props.tag>
   );

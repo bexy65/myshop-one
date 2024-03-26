@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ProductCart from "./ProductCart";
 
-function ProductGrid({ selectedCategory, sortDirection }) {
+function ProductGrid({ selectedCategory, sortDirection, addToCart }) {
   const [products, setProducts] = useState([]);
   const categoryUrl = `https://dummyjson.com/products/category/${selectedCategory}`;
 
@@ -35,6 +35,10 @@ function ProductGrid({ selectedCategory, sortDirection }) {
     fetchProducts(categoryUrl);
   }, [selectedCategory, sortDirection]);
 
+  const handleAddToCart = (product) => {
+    addToCart(product);
+  };
+
   return (
     <div className="product-grid">
       {products.length > 0 ? (
@@ -44,6 +48,7 @@ function ProductGrid({ selectedCategory, sortDirection }) {
             title={product.title}
             thumbnail={product.thumbnail}
             price={product.price}
+            onClick={() => handleAddToCart(product)}
           />
         ))
       ) : (

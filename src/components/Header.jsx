@@ -10,7 +10,14 @@ import {
   faShoppingCart,
 } from "@fortawesome/free-solid-svg-icons";
 
-function Header({ setSelectedCategory, selectedCategory }) {
+function Header({
+  setSelectedCategory,
+  selectedCategory,
+  cartItems,
+  removeFromCart,
+  increaseQuantity,
+  decreaseQuantity,
+}) {
   const [expanded, setExpanded] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
 
@@ -48,7 +55,14 @@ function Header({ setSelectedCategory, selectedCategory }) {
             <FontAwesomeIcon className="text-xl" icon={faShoppingCart} />
           </button>
         </div>
-        <CartModal isOpen={isCartOpen} onClose={closeCart} />
+        <CartModal
+          isOpen={isCartOpen}
+          onClose={closeCart}
+          cartItems={cartItems}
+          removeFromCart={removeFromCart}
+          increaseQuantity={increaseQuantity}
+          decreaseQuantity={decreaseQuantity}
+        />
       </div>
       <Categories
         state={expanded}
