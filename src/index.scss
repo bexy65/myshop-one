@@ -318,13 +318,14 @@ body {
   }
 
   .modal-overlay {
-    overflow: scroll;
     .modal {
       max-width: 390px;
       padding: 4px;
       max-height: 450px;
+      overflow: auto;
 
       .product-cart-container {
+        overflow-y: scroll;
         margin: 0;
         padding: 2px;
         width: 100%;
@@ -391,6 +392,17 @@ body {
       }
     }
   }
+
+  .modal-overlay {
+    .modal {
+      overflow: auto;
+      max-height: 70%;
+
+      .product-cart-container {
+        overflow-y: scroll;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 1023px) {
@@ -412,6 +424,17 @@ body {
           height: 400px;
         }
       }
+    }
+  }
+
+  .modal-overlay {
+    .modal {
+      overflow: auto;
+      max-height: 70%;
+    }
+
+    .product-cart-container {
+      overflow-y: scroll;
     }
   }
 }
