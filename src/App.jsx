@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import "./app.scss";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import MainContainer from "./components/MainContainer";
+import React, { useState } from 'react';
+import './app.scss';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import MainContainer from './components/MainContainer';
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -29,8 +29,14 @@ function App() {
 
   const increaseItemQuantity = (productId) => {
     const updatedCartItems = cartItems.map((item) => {
+      const newQuantity = item.quantity + 1;
+
       if (item.id === productId) {
-        return { ...item, quantity: item.quantity + 1 };
+        return {
+          ...item,
+          quantity: item.quantity + 1,
+          totalPrice: newQuantity * item.price,
+        };
       }
       return item;
     });
@@ -39,8 +45,14 @@ function App() {
 
   const decreaseItemQuantity = (productId) => {
     const updatedCartItems = cartItems.map((item) => {
+      const newQuantity = item.quantity - 1;
+
       if (item.id === productId && item.quantity > 1) {
-        return { ...item, quantity: item.quantity - 1 };
+        return {
+          ...item,
+          quantity: newQuantity,
+          totalPrice: newQuantity * item.price,
+        };
       }
       return item;
     });

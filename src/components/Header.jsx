@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import HamburgerNavIcon from "./HamburgerNavIcon";
-import Categories from "./Categories";
-import CartModal from "./CartModal";
+import React, { useState, useEffect } from 'react';
+import HamburgerNavIcon from './HamburgerNavIcon';
+import Categories from './Categories';
+import CartModal from './CartModal';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faBars,
   faUser,
   faShoppingCart,
-} from "@fortawesome/free-solid-svg-icons";
+} from '@fortawesome/free-solid-svg-icons';
 
 function Header({
   setSelectedCategory,
@@ -34,29 +34,29 @@ function Header({
   }
 
   return (
-    <div className="header-container">
-      <div className="header">
+    <div className='header-container'>
+      <div className='header'>
         <HamburgerNavIcon
           icon={
             <FontAwesomeIcon
-              className="text-2xl"
+              className='text-2xl'
               icon={faBars}
               onClick={toggleSidebar}
             />
           }
         />
         <h2>MY STORE</h2>
-        <div className="header-button-container">
+        <div className='header-button-container'>
           <button>
-            <FontAwesomeIcon className="text-xl" icon={faUser} />
+            <FontAwesomeIcon className='text-xl' icon={faUser} />
           </button>
-          <div className="header-button-divider"></div>
+          <div className='header-button-divider'></div>
           <button onClick={openCart}>
-            <FontAwesomeIcon className="text-xl" icon={faShoppingCart} />
+            <FontAwesomeIcon className='text-xl' icon={faShoppingCart} />
           </button>
         </div>
         <CartModal
-          isOpen={isCartOpen}
+          isOpen={isCartOpen || false}
           onClose={closeCart}
           cartItems={cartItems}
           removeFromCart={removeFromCart}
