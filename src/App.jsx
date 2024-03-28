@@ -3,6 +3,7 @@ import './app.scss';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import MainContainer from './components/MainContainer';
+import Footer from './components/Footer';
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -74,6 +75,7 @@ function App() {
         selectedCategory={selectedCategory}
         addToCart={addToCart}
       />
+      <Footer />
     </>
   );
 }
