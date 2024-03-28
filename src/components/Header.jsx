@@ -4,11 +4,7 @@ import Categories from './Categories';
 import CartModal from './CartModal';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faBars,
-  faUser,
-  faShoppingCart,
-} from '@fortawesome/free-solid-svg-icons';
+import { faBars, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 function Header({
   setSelectedCategory,
@@ -45,11 +41,12 @@ function Header({
             />
           }
         />
-        <h2>MY STORE</h2>
+        <h2>
+          <a href='/' className='no-underline'>
+            MY STORE
+          </a>
+        </h2>
         <div className='header-button-container'>
-          <button>
-            <FontAwesomeIcon className='text-xl' icon={faUser} />
-          </button>
           <div className='header-button-divider'></div>
           <button onClick={openCart}>
             <FontAwesomeIcon className='text-xl' icon={faShoppingCart} />
