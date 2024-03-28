@@ -1,6 +1,6 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUp19, faArrowDown91 } from "@fortawesome/free-solid-svg-icons";
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUp19, faArrowDown91 } from '@fortawesome/free-solid-svg-icons';
 
 function ProductSort({ setSortDirection }) {
   const sortHandler = (value) => {
@@ -8,10 +8,15 @@ function ProductSort({ setSortDirection }) {
   };
 
   return (
-    <div className="products-filter-container">
-      <FontAwesomeIcon onClick={() => sortHandler("asc")} icon={faArrowUp19} />
+    <div className='products-filter-container'>
       <FontAwesomeIcon
-        onClick={() => sortHandler("desc")}
+        className='cursor-pointer'
+        onClick={() => sortHandler('asc')}
+        icon={faArrowUp19}
+      />
+      <FontAwesomeIcon
+        className='cursor-pointer'
+        onClick={() => sortHandler('desc')}
         icon={faArrowDown91}
       />
     </div>
